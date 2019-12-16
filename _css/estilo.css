@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@font-face {
+    font-family: Flexo;
+    src: url(../_fonts/Flexo\ W01\ Demi.ttf);
+}
+
 
 /* CSS bem básico */
 
@@ -45,11 +50,96 @@ td img {
     width: 100px;
 }
 
-div.form-group {
-    display: inline-block;
+.emlinha {
+    display: flex;
+    justify-content: center;
 }
 
 input.form-control {
     display: flex;
     width: 600px;
+}
+
+#interface .label {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 50px 0px 0px 100px;
+    /* margin-bottom: -20px; */
+}
+
+#interface .label h1 {
+    padding: 0px;
+    font-family: Flexo;
+    font-size: 24pt;
+    font-weight: 100;
+    color: #BFA994;
+}
+
+.emlinha button {
+    width: 20px;
+    background-image: url(file:///C:/xampp/htdocs/Pokedex2.0/_images/search-solid.svg);
+}
+
+
+/* Formatando a ferramenta de pesquisa */
+
+.pesquisa {
+    background-color: #313131;
+    padding: 20px 100px 20px 100px;
+}
+
+.pesquisa .barra {
+    width: 100%;
+}
+
+.pesquisa .barra label {
+    padding: 0px;
+    font-family: Flexo;
+    font-size: 20pt;
+    font-weight: 100;
+    color: #fff;
+}
+
+
+/* Formatando o card */
+
+.cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.cartao {
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cartao img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #F2F2F2;
+    width: 175px;
+}
+
+.cartao .info {
+    margin: 2px;
+}
+
+.cartao h4 {
+    font-family: Flexo;
+}
+
+.cartao p {
+    font-family: Flexo;
+}
+
+.cartao h6 {
+    font-family: Flexo;
 }

@@ -9,7 +9,7 @@ function formatid($id){
     } else {
     $idpoke = $id;
     }
-    echo "<img src='https://assets.pokemon.com/assets/cms2/img/pokedex/full/$idpoke.png' alt='pokeImage'>";
+    echo $idpoke;
 }
 
 //Função lendário
@@ -23,15 +23,6 @@ function legendary($resp){
 }
 
 function tipo1($type1,$type2){
-    // if($type1 == "grass"){
-    //     echo "<span style='color:green;'><b>Grass</b></span>";
-    // }
-    // if($type1 == "poison"){
-    //     echo "<span style='color:purple;'><b>Poison</b></span>";
-    // }
-    // if($type1 == "fire"){
-    //     echo "<span style='color:red;'><b>Fire</b></span>";
-    // }
 
     switch($type1){
         case "grass":
@@ -163,7 +154,7 @@ function tipo1($type1,$type2){
 }
 
 
-//echo "<p><span class='grass'></span></p>"
+
 
 
 ?>
