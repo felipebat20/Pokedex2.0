@@ -52,7 +52,20 @@ td img {
 
 .emlinha {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    border: dotted 1px red;
+}
+
+.emlinha #btn-search {
+    width: 40px;
+    background-color: #DA471B;
+    border: none;
+}
+
+div.form-group {
+    display: flex;
+    flex-direction: column;
+    border: 1px dotted red;
 }
 
 input.form-control {
@@ -114,11 +127,17 @@ input.form-control {
 }
 
 .cartao {
+    position: relative;
     border-radius: 10px;
     border: 1px solid black;
     margin-right: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+.cartao:hover {
+    top: -4px;
 }
 
 .cartao img {
