@@ -1,5 +1,5 @@
 <?php require_once 'listar_pokemon.php';
-require_once 'conexao.php';
+
 require_once 'funcoes.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,31 +36,43 @@ require_once 'funcoes.php'; ?>
             </div>
         </div>
         <div id="bloco">
-            <!-- <form action="index.php" method="get">
-                <input type="hidden" name="id">
-                <input type="submit" >
-            </form> -->
+
 
             <div class="cartoes">
                 <?php while ($row = $result->fetch_assoc()) : ?>
-                    
-                        <div class="cartao">
-                            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/<?php formatid($row['id']) ?>.png" alt="avatar">
-                            <div class="info">
-                                <h6><b>Nº<?php formatid($row['id']); ?></b></h6>
-                                <h4><b><?php echo $row['name']; ?></b></h4>
-                                <p>
-                                    <?php tipo1($row['type1'], $row['type2']); ?>
-                                </p>
-                            </div>
+                    <div class="cartao">
+                        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/<?php formatid($row['id']) ?>.png" alt="avatar">
+                        <div class="info">
+                            <h6><b>Nº<?php formatid($row['id']); ?></b></h6>
+                            <h4><b><?php echo $row['name']; ?></b></h4>
+                            <p>
+                                <?php tipo1($row['type1'], $row['type2']); ?>
+                            </p>
                         </div>
-                    
+                    </div>
+
 
                 <?php endwhile; ?>
             </div>
+            <?php 
+                $pagAtual = isset($_GET['pagina'])?$_GET['pagina']:1;
 
+                
+            ?>
+            <nav class="text-center">
+                <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="index.php?pagina=<?php echo $pagAtual>1?($pagAtual - 1):1?>"><<</a></li>
+                    <?php  
+                        //Apresentar a paginação
+                        for($i = 1; $i <= $numPg; $i++ ){?>
+                             <li class='page-item'><a class='page-link' href='index.php?pagina=<?php echo $i; ?>'><?php echo $i; ?></a></li>
+                        
+                    <?php } ?>
+                    <li class="page-item"><a class="page-link" href="#">>></a></li>
+                </ul>
+            </nav>
         </div>
-
+    </div>
 </body>
 
 

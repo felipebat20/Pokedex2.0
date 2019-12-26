@@ -16,7 +16,6 @@ div#interface {
     width: 100%;
     height: 1000px;
     background-color: #ffffff;
-    background-image: url("../_images/fundo2.png");
     margin: -20px -10px -10px -10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     padding: 0px;
@@ -88,11 +87,6 @@ input.form-control {
     font-size: 24pt;
     font-weight: 100;
     color: #BFA994;
-}
-
-.emlinha button {
-    width: 20px;
-    background-image: url(file:///C:/xampp/htdocs/Pokedex2.0/_images/search-solid.svg);
 }
 
 
