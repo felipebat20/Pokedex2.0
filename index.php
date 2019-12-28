@@ -1,6 +1,7 @@
-<?php require_once 'listar_pokemon.php';
-
-require_once 'funcoes.php'; ?>
+<?php 
+    require_once 'listar_pokemon.php';
+    require_once 'funcoes.php'; 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -40,7 +41,7 @@ require_once 'funcoes.php'; ?>
 
             <div class="cartoes">
                 <?php while ($row = $result->fetch_assoc()) : ?>
-                    <div class="cartao">
+                    <div class="cartao"><a class='pokedetail' href="bub.php?id=<?php echo $row['id'];?>">
                         <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/<?php formatid($row['id']) ?>.png" alt="avatar">
                         <div class="info">
                             <h6><b>Nº<?php formatid($row['id']); ?></b></h6>
@@ -48,7 +49,7 @@ require_once 'funcoes.php'; ?>
                             <p>
                                 <?php tipo1($row['type1'], $row['type2']); ?>
                             </p>
-                        </div>
+                        </div></a>
                     </div>
 
 

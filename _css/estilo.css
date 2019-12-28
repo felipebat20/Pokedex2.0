@@ -14,8 +14,9 @@
 div#interface {
     position: absolute;
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background-color: #ffffff;
+    /* background-image: url("../_images/fundo2.png"); */
     margin: -20px -10px -10px -10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     padding: 0px;
@@ -56,7 +57,7 @@ td img {
 }
 
 .emlinha #btn-search {
-    width: 40px;
+    width: 50px;
     background-color: #DA471B;
     border: none;
 }
@@ -155,4 +156,11 @@ input.form-control {
 
 .cartao h6 {
     font-family: Flexo;
+}
+
+
+/* Formatando o link do card */
+
+.pokedetail {
+    text-decoration: none;
 }
